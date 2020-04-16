@@ -1,7 +1,6 @@
 # my_os
 A small OS, following T U , D O H OA N G's book "O P E R AT I N G S Y S T EMS : F R OM 0 T O 1"<br>
-requirements :<br>
-Windows 10 with following tools :
+Requirements : Windows 10 with following tools :
   - gdb
   - HxD
   - MinGW (gcc + make)
@@ -10,8 +9,8 @@ Windows 10 with following tools :
   - nasm  
 ## Project organisation
 |-build<br>
-||-bootoader<br>
-||-OS<br>
+|  |-bootoader<br>
+|  |-OS<br>
 |-bootloader<br>
 |-OS<br>
 ## Launch
