@@ -1,5 +1,5 @@
 # my_os
-A small OS, following T U , D O H OA N G's book "O P E R AT I N G S Y S T EMS : F R OM 0 T O 1"\n
+A small OS, following T U , D O H OA N G's book "O P E R AT I N G S Y S T EMS : F R OM 0 T O 1"<br>
 requirements :\n
 Windows 10 with following tools :\n
   - gdb
@@ -9,7 +9,7 @@ Windows 10 with following tools :\n
   - qemu
   - nasm  
 ## Project organisation
-|-build\n
+|-build<br>
 ||-bootoader\n
 ||-OS\n
 |-bootloader\n
