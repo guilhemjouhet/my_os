@@ -8,11 +8,12 @@ Requirements : Windows 10 with following tools :
   - qemu
   - nasm  
 ## Project organisation
-|-build<br>
-|  |-bootoader<br>
-|  |-OS<br>
-|-bootloader<br>
-|-OS<br>
+my_os
+  |-build<br>
+  |  |-bootoader<br>
+  |  |-OS<br>
+  |-bootloader<br>
+  |-OS<br>
 ## Launch
   - Build OS + create bootable floppy disk + lanch emulation (buildOS.bat)
   - Connect to emulated device through gdb (connect.bat)
