@@ -6,7 +6,8 @@ Requirements : Windows 10 with following tools :
   - MinGW (gcc + make)
   - GNU tools for windows (coreutils 5.3.0)
   - qemu
-  - nasm  
+  - nasm
+  - as /dev/null is not available in windows for disk image initialisation, C:\null\zeros is a 14MB binary file full of 0s
 ## Project organisation
 my_os<br>
 :|-build<br>
