@@ -8,3 +8,12 @@ Windows 10 with following tools :
   - GNU tools for windows (coreutils 5.3.0)
   - qemu
   - nasm  
+## Project organisation
+|-build
+||-bootoader
+||-OS
+|-bootloader
+|-OS
+## Launch
+  - Build OS + create bootable floppy disk + lanch emulation (buildOS.bat)
+  - Connect to emulated device through gdb (connect.bat)
