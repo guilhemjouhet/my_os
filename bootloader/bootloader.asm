@@ -1,8 +1,8 @@
-org 0x7c00
 bits 16
+global bootloader_entry
 
-
-init:
+section .text
+bootloader_entry:
 ;;; BASIC PRINT ;;;
 	mov si, msg 		;set text loc at GP reg SI
 	mov ah, 0xe      	;call int0x10 function
@@ -37,7 +37,7 @@ print_routine:
 is_done:
 	ret	
 	
-	
+
 ;; constant and variable definitions
 msg db "Welcome to My Operating System!", 0
 

@@ -1,12 +1,8 @@
-#@set path=C:\Users\guilh_000\Documents\2020\PRO\MOOC\OS\my_OS;%path%
 #:: -------------- clean old disk.img -------------- ::
-del disk.img
-
+rm disk.img
 #:: -------------- compile bootloader -------------- ::
-make
-make clean
-
+make -f Makefile
+make -f Makefile clean
 #:: -------------- lanch disk image -------------- ::
+echo "lanching qemu"
 qemu-system-i386 -machine q35 -fda disk.img -gdb tcp::26000 -S
-
-#@%comspec%

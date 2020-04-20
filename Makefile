@@ -15,12 +15,12 @@ os:
 
 bootdisk: bootloader os
 #initialise disk image to 0s
-	dd if=c:\null\zeros of=$(DISK_IMG) bs=512 count=2880
+	dd if=/dev/zero of=$(DISK_IMG) bs=512 count=2880
 #first sector is bootloader
 	dd conv=notrunc if=$(BOOTLOADER) of=$(DISK_IMG) bs=512 count=1 seek=0
 #second sector is OS
 	dd conv=notrunc if=$(OS) of=$(DISK_IMG) bs=512 count=1 seek=1
 	
 clean:
-	make -C bootloader clean
+#	make -C bootloader clean
 	make -C os clean
