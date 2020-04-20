@@ -22,5 +22,5 @@ bootdisk: bootloader os
 	dd conv=notrunc if=$(OS) of=$(DISK_IMG) bs=512 count=1 seek=1
 	
 clean:
- 	make -C bootloader clean
+	make -C bootloader clean
 	make -C os clean
