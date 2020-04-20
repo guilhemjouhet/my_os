@@ -9,12 +9,13 @@ bootloader_entry:
 	call print_routine
 	cli 				; no interrupts
 	cld 				; all that we need to init
+	
 ;;; LOAD MINIMALIST OS ;;;
 	mov ax, 0x50 		;set storage loc
 	mov es, ax
 	xor bx, bx
 	
-	mov al, 2 			;read 2 sector
+	mov al, 26 			;read 2 sector
 	mov ch, 0 			;cyl 0
 	mov cl, 2 			;read from sector 2
 	mov dh, 0			;head 0
@@ -22,7 +23,7 @@ bootloader_entry:
 	
 	mov ah, 0x02		;int 13 param
 	int 0x13			;call BIOS routine
-	jmp 0x50:0x0		;execute code that has been loaded
+	jmp [500h + 0x18] ;0x50:0x0		;execute code that has been loaded
 	
 ;;; END OF BOOTLOADER ;;;
 	hlt ; halt the system
